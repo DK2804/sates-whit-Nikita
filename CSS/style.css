@@ -6,8 +6,8 @@ body
 .container{
     min-height: 100px;
     display: grid;
-    grid-template-rows: 70px auto;
-    grid-template-columns: 70px auto;
+    grid-template-rows: 60px auto;
+    grid-template-columns: 60px auto;
 }
 
 
@@ -21,7 +21,13 @@ body
     border-right: 1.5px solid #e5e8ed;
 }
 .menu-action{
-    
+    height: 60px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center; 
 }
 .header{
 
@@ -30,13 +36,24 @@ body
     background: #f4f7fc;
 }
 .menu-item{
-    height: 70px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-left: 4px solid #fff;
+    border-right: 4px solid transparent;
+    transition: all 0.3s ease-in-out;
 }
 .menu-item:hover{
     border-left: 4px solid blue;
     cursor: pointer;
 }
+.menu-item--active {
+    border-left: 4px solid blue;
+}
+.menu-item > i {
+ color: rgb(17, 12, 12);
+}
+.menu-item--active > i {
+    color: blue;
+   }
